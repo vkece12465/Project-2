@@ -1,109 +1,122 @@
-/* .body-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    max-height: 100%;
-    opacity: 0.4;
-    background: rgb(78, 32, 227);
-    height: 100vh;
-    max-width: 100%;
-    overflow: hidden;
-    } */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background: url(./assets/pexels-maxyne-barcel-10402282\ 1.png);
+    background-image: linear-gradient(to bottom, rgba(28, 36, 61, 0.8),rgba(28, 36, 61, 0.8)), url(./assets/pexels-maxyne-barcel-10402282\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     max-width: 100%;
     overflow: hidden;
     background-attachment: fixed;
-
 }
-.navbar{
+section .navbar{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 20vh;
+}
+nav img{
+    width: 150px;
 }
 .list{
     display: flex;
-    flex-direction: row;
     list-style-type: none;
-    color: rgb(255, 238, 0);
-    font-weight: 700;
-    font-size: 30px;
-    justify-content: space-between;
-    align-items: center;
+    color: gold;
 }
-.list-item{
-margin:-10px 40px 20px 0px;
-align-items: center;
-cursor: pointer;
-font-family: 'Red Rose';
-z-index: 2;
+.list .list-item{
+    font-size: 24px;
+    margin-left: 30px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.logo{
-margin-left: 80px;
-z-index: 0;
+.list .list-item:not(:last-child){
+    margin-right: 60px;
 }
 .order{
-    display: block;
-    position: relative;
-    padding: 7px 25px;
-    border: none;
-    border-radius: 3px;
-    background-color: #E03B8B;
-    color: #ffffff;
-    font-family: 'Red Rose';
-    font-size: 30px;
-    box-shadow: 1px 1px 1px 1px black;
-    margin-right: 90px;
-    margin-bottom: 20px;
-    cursor: pointer;
+  background-color: #ff505f;
+  border: none;
+  color: #FFFFFF;
+  padding: 9px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .hero{
     display: flex;
-    flex-direction: row;
-}
-.hero-heading{
-    font-size: 60px;
-    display: block;
-    overflow: hidden;
-    align-items: center;
     justify-content: center;
-    color: rgb(255, 238, 0);
-    margin-top: 7%;
-    margin-left:100px;
-    width: 100%;
-    padding: 30px;
-    font-family: 'Dela Gothic One';
-    font-weight: 100;
-    letter-spacing: 2px;
-
-
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
 }
-div>.button-large{
-    height: 60px;
-    width: 20%;
-    font-size: 30px;
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 38%;
-    background-color: #ff429d;
+.hero .hero-heading{
+    font-size: 3.5rem;
+    color: gold;
+    max-width: 850px;
+    line-height: 4.5rem;
+    font-family: Dela Gothic One;
+}
+.button-large{
+    padding: 15px 25px;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: #ff505f;
+    color: #FFFFFF;
     border: none;
-    border-radius: 4px;
+    outline: none;
+    border-radius: 5px;
     cursor: pointer;
-    color: white;
-    box-shadow: 1px 1px 1px 1px black;
-
 }
-
-.bottom-logo{
-    position: relative;
-    margin-top: 360px;
+div .bottom{
+    align-self: flex-end;
+    padding-top: 80px;
+}
+div .bottom img{
+    width: 150px;
     margin-right: 30px;
-    width: 70%;
 }
+
+
+/*******Media Queries**********/
+@media screen and (max-width:720px){
+    nav{
+        max-width: 720px;
+        padding-bottom: 60px;
+        overflow-x: scroll !important;
+    }
+    section .navbar .list{
+        max-width: 190px;
+    }
+    section .navbar .list .list-item{
+        font-size: 10px;
+        margin-left: -40px;
+    }
+    nav div img{
+        width: 70px;
+        margin-right: 15px;
+    }
+    .order{
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+    .hero .hero-heading{
+        margin-top: 100px;
+        max-width: 300px;
+        flex-wrap: wrap;
+        height: 100vh;
+        font-size: 1.6rem;
+        line-height: 25px;
+    }
+    .button-large{
+       margin-top: 40px;
+       padding: 10px 15px;
+       font-size: 12px;
+    }
+    div .bottom img{
+        margin: 0px 30px 200px 0px;
+        width: 50px;
+    }
+}
+
